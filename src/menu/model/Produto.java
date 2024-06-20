@@ -76,7 +76,7 @@ public abstract class Produto {
 		System.out.println(Cores.TEXT_GREEN_BOLD +"***********************************************************");
 		System.out.println(Cores.TEXT_PURPLE_BOLD +"ID do produto: "+Cores.TEXT_YELLOW_BOLD + this.id);
 		System.out.println(Cores.TEXT_PURPLE_BOLD +"Peça: "+Cores.TEXT_YELLOW_BOLD  + tipo);
-		System.out.println(Cores.TEXT_PURPLE_BOLD +"Tamanho: "+Cores.TEXT_YELLOW_BOLD + this.tamanho);
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Tamanho: "+Cores.TEXT_YELLOW_BOLD + Character.toUpperCase(this.tamanho));
 		System.out.println(Cores.TEXT_PURPLE_BOLD +"Cor: "+Cores.TEXT_YELLOW_BOLD + this.cor);
 		System.out.println(Cores.TEXT_PURPLE_BOLD +"Quantidade: "+Cores.TEXT_YELLOW_BOLD + this.quantidade);
 
