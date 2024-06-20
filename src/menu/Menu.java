@@ -2,9 +2,11 @@ package menu;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
+import java.util.Optional;
 import java.util.Scanner;
 import menu.controller.ProdutoController;
 import menu.model.Camiseta;
+import menu.model.Produto;
 import menu.model.Calca;
 import menu.model.Calcado;
 
@@ -107,7 +109,11 @@ public class Menu {
 				System.out.println("Digite o número do ID: ");
 				id = leia.nextInt();
 
-				produtos.procurarPorNumero(id);
+				Optional<Produto> checaNulo = Optional.ofNullable(produtos.buscarNoEstoque(id));
+				if(checaNulo.isPresent()) {
+					produtos.buscarNoEstoque(id).visualizar();
+				}else
+					System.out.printf("O produto ID %d não existe!", id);
 				keyPress();
 				break;
 			}

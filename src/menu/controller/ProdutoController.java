@@ -8,15 +8,6 @@ public class ProdutoController implements ProdutoRepository {
 	private ArrayList<Produto> listaProdutos = new ArrayList<Produto>();
 	int id = 0;
 
-	@Override
-	public void procurarPorNumero(int id) {
-		var produto = buscarNoEstoque(id);
-		if (produto != null) {
-			produto.visualizar();
-		} else {
-			System.out.printf("O ID %d não foi localizado no estoque", id);
-		}
-	}
 
 	@Override
 	public void listarTodos() {
@@ -60,9 +51,9 @@ public class ProdutoController implements ProdutoRepository {
 	}
 
 	public Produto buscarNoEstoque(int id) {
-		for (var conta : listaProdutos) {
-			if (conta.getId() == id) {
-				return conta;
+		for (var produto : listaProdutos) {
+			if (produto.getId() == id) {
+				return produto;
 			}
 		}
 		return null;
