@@ -1,5 +1,7 @@
 package menu.model;
 
+import menu.util.Cores;
+
 public class Calca extends Produto {
 
 	private String material;
@@ -20,7 +22,7 @@ public class Calca extends Produto {
 	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("Material: " + this.material);
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Material: "+Cores.TEXT_YELLOW_BOLD + this.material+ Cores.TEXT_PURPLE_BOLD);
 	}
 
 }

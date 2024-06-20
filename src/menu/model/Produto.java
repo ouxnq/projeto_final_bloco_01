@@ -1,5 +1,7 @@
 package menu.model;
 
+import menu.util.Cores;
+
 public abstract class Produto {
 	private int id;
 	private char tamanho;
@@ -69,14 +71,14 @@ public abstract class Produto {
 			tipo = "Calça";
 			break;
 		}
-		System.out.println("\n\n***********************************************************");
-		System.out.println("Dados do produto:");
-		System.out.println("***********************************************************");
-		System.out.println("ID do produto: " + this.id);
-		System.out.println("Peça: " + tipo);
-		System.out.println("Tamanho: " + this.tamanho);
-		System.out.println("Cor: " + this.cor);
-		System.out.println("Quantidade: " + this.quantidade);
+		System.out.println(Cores.TEXT_GREEN_BOLD +"\n\n***********************************************************");
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Dados do produto:");
+		System.out.println(Cores.TEXT_GREEN_BOLD +"***********************************************************");
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"ID do produto: "+Cores.TEXT_YELLOW_BOLD + this.id);
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Peça: "+Cores.TEXT_YELLOW_BOLD  + tipo);
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Tamanho: "+Cores.TEXT_YELLOW_BOLD + this.tamanho);
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Cor: "+Cores.TEXT_YELLOW_BOLD + this.cor);
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Quantidade: "+Cores.TEXT_YELLOW_BOLD + this.quantidade);
 
 	}
 

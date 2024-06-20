@@ -1,5 +1,7 @@
 package menu.model;
 
+import menu.util.Cores;
+
 public class Calcado extends Produto {
 
 	private String marca;
@@ -21,6 +23,6 @@ public class Calcado extends Produto {
 	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("Marca: " + this.marca);
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Marca: "+Cores.TEXT_YELLOW_BOLD + this.marca+ Cores.TEXT_PURPLE_BOLD);
 	}
 }

@@ -3,23 +3,29 @@ package menu.controller;
 import java.util.ArrayList;
 import menu.model.Produto;
 import menu.repository.ProdutoRepository;
+import menu.util.Cores;
 
 public class ProdutoController implements ProdutoRepository {
 	private ArrayList<Produto> listaProdutos = new ArrayList<Produto>();
 	int id = 0;
 
-
 	@Override
 	public void listarTodos() {
-		for (var produto : listaProdutos) {
-			produto.visualizar();
+		if (listaProdutos.isEmpty()) {
+			System.out.println("O estoque está vazio!");
+
+		} else {
+
+			for (var produto : listaProdutos) {
+				produto.visualizar();
+			}
 		}
 	}
 
 	@Override
 	public void cadastrar(Produto produto) {
 		listaProdutos.add(produto);
-		System.out.printf("O produto ID %d foi cadastrado com sucesso!", produto.getId());
+		System.out.printf("O produto ID %d foi cadastrado com sucesso!\n", produto.getId());
 	}
 
 	@Override
@@ -46,9 +52,6 @@ public class ProdutoController implements ProdutoRepository {
 			System.out.println("\nA conta número " + id + " não foi encontrada!");
 	}
 
-	public int gerarId() {
-		return ++id;
-	}
 
 	public Produto buscarNoEstoque(int id) {
 		for (var produto : listaProdutos) {
@@ -57,6 +60,20 @@ public class ProdutoController implements ProdutoRepository {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public void buscaIDs() {
+		for(var produto:listaProdutos) {
+			System.out.println((Cores.TEXT_YELLOW_BOLD+produto.getId()+ Cores.TEXT_PURPLE_BOLD));
+		}
+		
+	}
+	public boolean vazio() {
+		if (listaProdutos.isEmpty()) {
+			return false;
+		}
+		return true;
 	}
 
 }

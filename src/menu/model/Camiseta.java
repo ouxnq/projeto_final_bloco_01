@@ -1,5 +1,7 @@
 package menu.model;
 
+import menu.util.Cores;
+
 public class Camiseta extends Produto {
 
 	private String estampa;
@@ -20,7 +22,7 @@ public class Camiseta extends Produto {
 	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("Estampa: " + this.estampa);
+		System.out.println(Cores.TEXT_PURPLE_BOLD +"Estampa: "+Cores.TEXT_YELLOW_BOLD + this.estampa+ Cores.TEXT_PURPLE_BOLD);
 	}
 
 }
