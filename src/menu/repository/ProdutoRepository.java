@@ -1,7 +1,7 @@
 package menu.repository;
 import menu.model.Produtos;
 
-public interface MenuRepository {
+public interface ProdutoRepository {
 
 	public void procurarPorNumero(int numero);
 

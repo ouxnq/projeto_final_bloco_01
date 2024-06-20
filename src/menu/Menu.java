@@ -1,7 +1,10 @@
 package menu;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+
 
 public class Menu {
 
@@ -44,34 +47,50 @@ public class Menu {
 			switch (opcao) {
 			case 1: {
 				System.out.println("Adicionar novo produto ao estoque\n");
+				keyPress();
 				break;
 			}
 			case 2: {
 				System.out.println("Listar estoque\n");
+				keyPress();
 				break;
 			}
 			case 3: {
 				System.out.println("Buscar produtos por número\n");
+				keyPress();
 				break;
 			}
 			case 4: {
 				System.out.println("Atualizar dados de um produto\n");
+				keyPress();
 				break;
 			}
 			case 5: {
 				System.out.println("Deletar produtos\n");
+				keyPress();
 				break;
-			}default:{
+			}
+			default: {
 				System.out.println("Opção inválida!\n");
+				keyPress();
 				break;
 			}
 			}
 		}
 	}
+
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
 		System.out.println("Hardzz moda sustentável, o drip que salva!");
 		System.out.println("Projeto Desenvolvido por: Vinícius");
 		System.out.println("*********************************************************");
+	}
+
+	public static void keyPress() {
+		try {
+			System.out.println("\n\nPressione Enter para continuar...");
+			System.in.read();
+		} catch (IOException e) {
+		}
 	}
 }

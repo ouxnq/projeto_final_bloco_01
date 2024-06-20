@@ -1,10 +1,10 @@
 package menu.model;
 
-public class Tenis extends Produtos {
+public class Calcados extends Produtos {
 
 	private String marca;
 
-	public Tenis(char tamanho, String cor, int quantidade, String marca) {
+	public Calcados(char tamanho, String cor, int quantidade, String marca) {
 		super(tamanho, cor, quantidade);
 		this.marca = marca;
 	}
