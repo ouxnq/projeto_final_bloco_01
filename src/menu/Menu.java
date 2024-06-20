@@ -70,8 +70,8 @@ public class Menu {
 	}
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: Vinícius");
 		System.out.println("Hardzz moda sustentável, o drip que salva!");
+		System.out.println("Projeto Desenvolvido por: Vinícius");
 		System.out.println("*********************************************************");
 	}
 }
