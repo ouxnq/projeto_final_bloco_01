@@ -1,11 +1,11 @@
 package menu.model;
 
-public class Calca extends Produtos {
+public class Calca extends Produto {
 
 	private String material;
 
-	public Calca(char tamanho, String cor, int quantidade, String material) {
-		super(tamanho, cor, quantidade);
+	public Calca(int id, char tamanho, String cor, int quantidade, int peca, String material) {
+		super(id, tamanho, cor, quantidade, peca);
 		this.material = material;
 	}
 

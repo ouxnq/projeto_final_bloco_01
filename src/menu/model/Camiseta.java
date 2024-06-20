@@ -1,11 +1,11 @@
 package menu.model;
 
-public class Camiseta extends Produtos {
+public class Camiseta extends Produto {
 
 	private String estampa;
 
-	public Camiseta(char tamanho, String cor, String marca, int quantidade, String estampa) {
-		super(tamanho, cor, quantidade);
+	public Camiseta(int id, char tamanho, String cor, int quantidade, int peca, String estampa) {
+		super(id, tamanho, cor, quantidade, peca);
 		this.estampa = estampa;
 	}
 
