@@ -12,7 +12,7 @@ public class ProdutoController implements ProdutoRepository {
 	@Override
 	public void listarTodos() {
 		if (listaProdutos.isEmpty()) {
-			System.out.println("O estoque está vazio!");
+			System.out.println("O estoque está vazio!!");
 
 		} else {
 
